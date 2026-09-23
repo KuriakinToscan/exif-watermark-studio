@@ -1,37 +1,39 @@
-# Geotag & EXIF Studio 🛰️📸
+# Geotag & EXIF Studio 🛰️📸 (v2.0)
 
-Aplicação web desenvolvida para uso em campo e em escritório, projetada para **extrair automaticamente metadados EXIF/GPS de imagens JPEG** (como coordenadas de latitude, longitude, altitude, data e modelo do drone/câmera) e sobrepô-los de forma visível e personalizada na própria imagem, junto com um logotipo institucional e textos customizados.
+Aplicação web avançada desenvolvida para uso em campo e em escritório, projetada para **extrair automaticamente metadados EXIF/GPS e telemetria de imagens JPEG** (com suporte otimizado para drones DJI e câmeras gerais), sobrepõem coordenadas, modelo do equipamento, data, altitude e a **direção de azimute com seta indicativa**, além de logotipos personalizados.
 
-O grande diferencial: **funciona 100% offline** em um único arquivo, garantindo total privacidade e autonomia em missões de campo sem acesso à internet.
-
----
-
-## ✨ Principais Recursos
-
-- **Processamento 100% Offline:** Arquivo único contendo toda a lógica e estilos. Baixe uma vez e rode direto no navegador do computador, tablet ou celular.
-- **Leitura Automática de EXIF & GPS:** Decodificação nativa de coordenadas geográficas, altitude, carimbo de data/hora e identificação do equipamento (marca e modelo de câmeras e drones, como linhas DJI).
-- **Personalização de Textos:** Edição livre do modelo do equipamento, inclusão de textos adicionais (ex: nome do projeto, setor, local) e ativação/desativação modular de elementos.
-- **Logotipo e Alinhamentos Independentes:** Insira sua logo e posicione textos e logotipos de forma isolada na parte inferior da imagem (**Esquerda, Centro ou Direita**).
-- **Estilos Visuais Avançados:** Controles de tamanho de fonte, opacidade da tarja de fundo, cor do texto e escala da logo em tempo real.
-- **Exportação em Alta Resolução:** Pré-visualização instantânea e download da imagem final tratada mantendo a qualidade original.
+Tudo isso rodando **100% offline em um único arquivo**, com suporte completo a **processamento em lote (Batch)** e exportação compactada em **ZIP**.
 
 ---
 
-## 🚀 Como Usar (Modo Offline)
+## ✨ Principais Recursos da Versão 2.0
 
-1. Faça o download do arquivo [index.html](index.html) deste repositório.
+- **Processamento em Lote (Batch & Pastas):** Selecione múltiplos arquivos JPEG ou aponte para uma pasta inteira no seu computador para processar centenas de fotos de uma só vez.
+- **Exportação Automatizada em ZIP:** Compacta e baixa todas as imagens processadas em alta resolução instantaneamente em um único arquivo `.zip`.
+- **Processamento 100% Offline:** Arquivo único contendo toda a lógica, bibliotecas e estilos. Baixe uma vez e rode direto no navegador sem depender de internet.
+- **Leitura Inteligente de EXIF, GPS & DJI:** Decodificação de latitude, longitude, altitude, carimbo de data/hora e identificação refinada de modelos de drones e câmeras (linhas DJI Mavic, Air, Mini, Matrice, Zenmuse, além de smartphones e outras marcas).
+- **Indicador Dinâmico de Azimute (Direção):** Extração da tag de orientação de campo (`GPSImgDirection`) acompanhada de uma **seta vetorial rotacionada em tempo real** apontando para a direção da tomada em relação ao norte.
+- **Logotipo no Topo e Textos na Base:** Layout limpo com alinhamentos independentes (Esquerda, Centro ou Direita) fixados de forma inteligente.
+- **Controles Visuais Independentes:** Ajustes de escala de fonte, tamanho do logotipo, cor unificada de fundo e **opacidades totalmente separadas** para o texto, para o fundo do texto e para o fundo do logotipo.
+
+---
+
+## 🚀 Como Usar
+
+1. Faça o download do arquivo [index.html](index.html) desta versão 2.0 no repositório.
 2. Salve-o em seu computador, tablet ou smartphone.
-3. Dê um duplo clique no arquivo (ou abra-o diretamente em qualquer navegador moderno como Chrome, Edge ou Safari). O aplicativo funcionará imediatamente, mesmo sem internet.
+3. Dê um duplo clique para abrir o arquivo em qualquer navegador moderno (Chrome, Edge, Safari, Firefox). O aplicativo funcionará imediatamente de forma totalmente isolada e offline.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5 & CSS3** com design responsivo estilizado via **Tailwind CSS**.
-- **JavaScript Moderno (ES6+)** para manipulação de arquivos locais, leitura de headers binários EXIF e renderização via HTML5 Canvas.
+- **JavaScript Moderno (ES6+)** para manipulação local, leitura de headers binários EXIF e renderização via HTML5 Canvas.
+- **EXIF-JS** e **JSZip** integrados para manipulação de metadados e empacotamento em lote.
 
 ---
 
 ## 📜 Licença
 
-Este projeto é distribuído sob a licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto é distribuído sob os termos da licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
